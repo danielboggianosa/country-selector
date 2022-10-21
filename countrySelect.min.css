@@ -1,0 +1,342 @@
+.country-select {
+ position:relative;
+ display:inline-block
+}
+.country-select * {
+ -webkit-box-sizing:border-box;
+ box-sizing:border-box
+}
+.country-select .hide {
+ display:none
+}
+.country-select .v-hide {
+ visibility:hidden
+}
+.country-select input,
+.country-select input[type=text] {
+ position:relative;
+ z-index:0;
+ margin-top:0!important;
+ margin-bottom:0!important;
+ padding-right:36px;
+ margin-right:0
+}
+.country-select .flag-dropdown {
+ position:absolute;
+ top:0;
+ bottom:0;
+ right:0;
+ padding:1px
+}
+.country-select .selected-flag {
+ z-index:1;
+ position:relative;
+ width:36px;
+ height:100%;
+ padding:0 0 0 8px
+}
+.country-select .selected-flag .flag {
+ position:absolute;
+ top:0;
+ bottom:0;
+ margin:auto
+}
+.country-select .selected-flag .arrow {
+ position:absolute;
+ top:50%;
+ margin-top:-2px;
+ right:6px;
+ width:0;
+ height:0;
+ border-left:3px solid transparent;
+ border-right:3px solid transparent;
+ border-top:4px solid #555
+}
+.country-select .selected-flag .arrow.up {
+ border-top:none;
+ border-bottom:4px solid #555
+}
+.country-select .country-list {
+ position:absolute;
+ z-index:2;
+ list-style:none;
+ text-align:left;
+ padding:0;
+ margin:0 0 0 -1px;
+ -webkit-box-shadow:1px 1px 4px rgba(0,0,0,.2);
+ box-shadow:1px 1px 4px rgba(0,0,0,.2);
+ background-color:#fff;
+ border:1px solid #ccc;
+ white-space:nowrap;
+ max-height:200px;
+ overflow-y:scroll
+}
+.country-select .country-list .flag {
+ display:inline-block;
+ width:20px;
+ margin-right:6px
+}
+@media (max-width:500px) {
+ .country-select .country-list {
+  white-space:normal
+ }
+}
+.country-select .country-list .divider {
+ padding-bottom:5px;
+ margin-bottom:5px;
+ border-bottom:1px solid #ccc
+}
+.country-select .country-list .country {
+ padding:5px 10px
+}
+.country-select .country-list .country.highlight {
+ background-color:rgba(0,0,0,.05)
+}
+.country-select .country-list .country-name,
+.country-select .country-list .flag {
+ vertical-align:middle
+}
+.country-select.inside input,
+.country-select.inside input[type=text] {
+ padding-right:6px;
+ padding-left:52px;
+ margin-left:0
+}
+.country-select.inside .flag-dropdown {
+ right:auto;
+ left:0
+}
+.country-select.inside .selected-flag {
+ width:46px
+}
+.country-select.inside .flag-dropdown:hover {
+ cursor:pointer
+}
+.country-select.inside .flag-dropdown:hover .selected-flag {
+ background-color:rgba(0,0,0,.05)
+}
+.country-select.inside input[disabled]+.flag-dropdown:hover,
+.country-select.inside input[readonly]+.flag-dropdown:hover {
+ cursor:default
+}
+.country-select.inside input[disabled]+.flag-dropdown:hover .selected-flag,
+.country-select.inside input[readonly]+.flag-dropdown:hover .selected-flag {
+ background-color:transparent
+}
+.country-select .flag {
+ height:15px;
+ -webkit-box-shadow:0 0 1px 0 #888;
+ box-shadow:0 0 1px 0 #888;
+ background-image:url(https://svadcf.es/documentos/images_appli/country-picker-flags.png);
+ background-repeat:no-repeat;
+ background-color:#dbdbdb;
+ background-position:20px 0;
+ width:20px
+}
+.country-select .flag.be {
+ width:18px
+}
+.country-select .flag.ch {
+ width:15px
+}
+@media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min--moz-device-pixel-ratio:2),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx) {
+ .country-select .flag {
+  background-image:url(https://svadcf.es/documentos/images_appli/country-picker-flags@2x.png);
+  background-size:5630px 15px
+ }
+}
+.country-select .flag.ae {
+ height:10px;
+ background-position:-44px 0
+}
+.country-select .flag.ar {
+ height:13px;
+ background-position:-220px 0
+}
+.country-select .flag.at {
+ height:14px;
+ background-position:-264px 0
+}
+.country-select .flag.au {
+ height:10px;
+ background-position:-286px 0
+}
+.country-select .flag.be {
+ height:15px;
+ background-position:-440px 0
+}
+.country-select .flag.br {
+ height:14px;
+ background-position:-680px 0
+}
+.country-select .flag.ca {
+ height:10px;
+ background-position:-834px 0
+}
+.country-select .flag.ch {
+ height:15px;
+ background-position:-944px 0
+}
+.country-select .flag.cl {
+ height:14px;
+ background-position:-1005px 0
+}
+.country-select .flag.cn {
+ height:14px;
+ background-position:-1049px 0
+}
+.country-select .flag.co {
+ height:14px;
+ background-position:-1071px 0
+}
+.country-select .flag.de {
+ height:12px;
+ background-position:-1269px 0
+}
+.country-select .flag.dk {
+ height:15px;
+ background-position:-1335px 0
+}
+.country-select .flag.dz {
+ height:14px;
+ background-position:-1401px 0
+}
+.country-select .flag.ec {
+ height:14px;
+ background-position:-1445px 0
+}
+.country-select .flag.eg {
+ height:14px;
+ background-position:-1489px 0
+}
+.country-select .flag.es {
+ height:14px;
+ background-position:-1555px 0
+}
+.country-select .flag.fi {
+ height:12px;
+ background-position:-1621px 0
+}
+.country-select .flag.fr {
+ height:14px;
+ background-position:-1731px 0
+}
+.country-select .flag.gb {
+ height:10px;
+ background-position:-1775px 0
+}
+.country-select .flag.gr {
+ height:14px;
+ background-position:-2039px 0
+}
+.country-select .flag.hu {
+ height:10px;
+ background-position:-2281px 0
+}
+.country-select .flag.ie {
+ height:10px;
+ background-position:-2347px 0
+}
+.country-select .flag.in {
+ height:14px;
+ background-position:-2413px 0
+}
+.country-select .flag.ir {
+ height:12px;
+ background-position:-2479px 0
+}
+.country-select .flag.is {
+ height:15px;
+ background-position:-2501px 0
+}
+.country-select .flag.it {
+ height:14px;
+ background-position:-2523px 0
+}
+.country-select .flag.jp {
+ height:14px;
+ background-position:-2611px 0
+}
+.country-select .flag.kr {
+ height:14px;
+ background-position:-2787px 0
+}
+.country-select .flag.lu {
+ height:12px;
+ background-position:-3051px 0
+}
+.country-select .flag.ma {
+ height:14px;
+ background-position:-3117px 0
+}
+.country-select .flag.mx {
+ height:12px;
+ background-position:-3556px 0
+}
+.country-select .flag.my {
+ height:10px;
+ background-position:-3578px 0
+}
+.country-select .flag.nl {
+ height:14px;
+ background-position:-3752px 0
+}
+.country-select .flag.no {
+ height:15px;
+ background-position:-3774px 0
+}
+.country-select .flag.nz {
+ height:10px;
+ background-position:-3855px 0
+}
+.country-select .flag.pe {
+ height:14px;
+ background-position:-4121px 0;
+}
+.country-select .flag.pl {
+ height:13px;
+ background-position:-4031px 0
+}
+.country-select .flag.pt {
+ height:14px;
+ background-position:-4141px 0
+}
+.country-select .flag.py {
+ height:11px;
+ background-position:-4185px 0
+}
+.country-select .flag.ro {
+ height:14px;
+ background-position:-4251px 0
+}
+.country-select .flag.sa {
+ height:14px;
+ background-position:-4339px 0
+}
+.country-select .flag.se {
+ height:13px;
+ background-position:-4427px 0
+}
+.country-select .flag.tn {
+ height:14px;
+ background-position:-5021px 0
+}
+.country-select .flag.tr {
+ height:14px;
+ background-position:-5065px 0
+}
+.country-select .flag.us {
+ height:11px;
+ background-position:-5241px 0
+}
+.country-select .flag.uy {
+ height:14px;
+ background-position:-5263px 0
+}
+.country-select .flag.ve {
+ height:14px;
+ background-position:-5346px 0
+}
+.country-select .flag.all {
+ height:0
+}
